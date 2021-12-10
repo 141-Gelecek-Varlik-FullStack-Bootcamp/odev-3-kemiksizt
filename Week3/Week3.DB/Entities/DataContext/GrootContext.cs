@@ -9,6 +9,8 @@ namespace Week3.DB.Entities.DataContext
 {
     public partial class GrootContext : DbContext
     {
+        // Scaffold-DbContext "Server=.;Database=Groot;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Contextdir Entities/DataContext -Context GrootContext -Project Hafta3.DB -StartUpProject Hafta3.DB -NoPluralize -Force
+
         public GrootContext()
         {
         }
