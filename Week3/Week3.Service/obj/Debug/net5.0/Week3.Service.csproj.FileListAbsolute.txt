@@ -10,3 +10,8 @@ C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\obj\Debug\n
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\obj\Debug\net5.0\Week3.Service.dll
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\obj\Debug\net5.0\ref\Week3.Service.dll
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\obj\Debug\net5.0\Week3.Service.pdb
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\bin\Debug\net5.0\Week3.DB.dll
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\bin\Debug\net5.0\Week3.Model.dll
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\bin\Debug\net5.0\Week3.DB.pdb
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\bin\Debug\net5.0\Week3.Model.pdb
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Service\obj\Debug\net5.0\Week3.Service.csproj.CopyComplete

@@ -33,6 +33,9 @@
               },
               "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Model\\Week3.Model.csproj": {
                 "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Model\\Week3.Model.csproj"
+              },
+              "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Service\\Week3.Service.csproj": {
+                "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Service\\Week3.Service.csproj"
               }
             }
           }
@@ -50,6 +53,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[10.1.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -179,6 +186,73 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Service\\Week3.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Service\\Week3.Service.csproj",
+        "projectName": "Week3.Service",
+        "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Service\\Week3.Service.csproj",
+        "packagesPath": "C:\\Users\\Turab\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Turab\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.DB\\Week3.DB.csproj": {
+                "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.DB\\Week3.DB.csproj"
+              },
+              "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Model\\Week3.Model.csproj": {
+                "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Model\\Week3.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
