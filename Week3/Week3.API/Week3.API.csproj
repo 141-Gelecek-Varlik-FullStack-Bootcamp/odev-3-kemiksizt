@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Week3.DB\Week3.DB.csproj" />
+    <ProjectReference Include="..\Week3.Model\Week3.Model.csproj" />
+  </ItemGroup>
+
 </Project>

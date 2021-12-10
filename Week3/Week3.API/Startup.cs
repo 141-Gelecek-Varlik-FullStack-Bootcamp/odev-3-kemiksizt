@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Week3.API.Infrastructure;
 
 namespace Week3.API
 {
@@ -23,7 +25,15 @@ namespace Week3.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            var _mappingProfile = new MapperConfiguration(mp => { mp.AddProfile(new MappingProfile()); });
+            IMapper mapper = _mappingProfile.CreateMapper();
+
+            services.AddSingleton(mapper);
+
+            
+            
+                
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +42,7 @@ namespace Week3.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
             }
             else
             {
