@@ -36,7 +36,7 @@ namespace Week3.Service.User
                 }
                 else
                 {
-                    result.ExceptionMessage = "Kullanıcı bulunamadı.";
+                    result.ExceptionMessage = "Kullanıcı bulunamadı. Bilgileri kontrol ediniz";
                     result.IsSuccess = false;
                 }
             }
@@ -61,7 +61,7 @@ namespace Week3.Service.User
                 }
                 else
                 {
-                    result.ExceptionMessage = "Hiçbir kullanıcı bulunamadı.";
+                    result.ExceptionMessage = "Sistemde hiçbir kullanıcı yok";
                 }
             }
 
@@ -127,7 +127,7 @@ namespace Week3.Service.User
                 }
                 else
                 {
-                    result.ExceptionMessage = "Kullanıcı bulunamadı.";
+                    result.ExceptionMessage = "Aranan kullanıcı bulunamadı. Bilgileri kontrol ediniz.";
                 }
             }
 
