@@ -1,0 +1,12 @@
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\bin\Debug\net5.0\Week3.Model.deps.json
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\bin\Debug\net5.0\Week3.Model.dll
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\bin\Debug\net5.0\ref\Week3.Model.dll
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\bin\Debug\net5.0\Week3.Model.pdb
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\Week3.Model.csproj.AssemblyReference.cache
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\Week3.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\Week3.Model.AssemblyInfoInputs.cache
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\Week3.Model.AssemblyInfo.cs
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\Week3.Model.csproj.CoreCompileInputs.cache
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\Week3.Model.dll
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\ref\Week3.Model.dll
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.Model\obj\Debug\net5.0\Week3.Model.pdb

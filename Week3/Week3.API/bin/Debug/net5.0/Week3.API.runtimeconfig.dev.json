@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Turab\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Turab\\.nuget\\packages"
+    ]
+  }
+}
