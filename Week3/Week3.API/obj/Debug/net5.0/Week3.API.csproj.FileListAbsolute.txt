@@ -8,7 +8,6 @@ C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\ref\Week3.API.dll
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Week3.API.pdb
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Week3.API.Views.dll
-C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Week3.API.Views.pdb
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\obj\Debug\net5.0\Week3.API.csproj.AssemblyReference.cache
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\obj\Debug\net5.0\Week3.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\obj\Debug\net5.0\Week3.API.AssemblyInfoInputs.cache

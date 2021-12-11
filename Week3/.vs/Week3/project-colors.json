@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c5bc0793-9f7e-4058-aceb-7b0bcdbb2873": {
+      "ProjectGuid": "c5bc0793-9f7e-4058-aceb-7b0bcdbb2873",
+      "DisplayName": "Week3.API",
+      "ColorIndex": 0
+    },
+    "21106f56-61f0-452a-a585-742a5b609058": {
+      "ProjectGuid": "21106f56-61f0-452a-a585-742a5b609058",
+      "DisplayName": "Week3.DB",
+      "ColorIndex": 1
+    },
+    "92f18981-f3bc-4c9c-bc4b-a0a0790efc4b": {
+      "ProjectGuid": "92f18981-f3bc-4c9c-bc4b-a0a0790efc4b",
+      "DisplayName": "Week3.Model",
+      "ColorIndex": 2
+    },
+    "861cb63c-df88-478e-8331-31a2c9c153cb": {
+      "ProjectGuid": "861cb63c-df88-478e-8331-31a2c9c153cb",
+      "DisplayName": "Week3.Service",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

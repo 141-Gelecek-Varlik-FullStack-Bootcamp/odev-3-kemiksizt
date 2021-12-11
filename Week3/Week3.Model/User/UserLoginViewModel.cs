@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Week3.Model.User
 {
-    public class UserViewModel
+    public class UserLoginViewModel
     {
-        public string Name { get; set; }
         public string UserName { get; set; }
-        public string Email { get; set; }
         public string Password { get; set; }
- 
-
-       
     }
 }

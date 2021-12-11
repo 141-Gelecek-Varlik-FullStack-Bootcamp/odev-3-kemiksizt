@@ -18,7 +18,35 @@ namespace Week3.Service.User
         {
             mapper = _mapper;
         }
-        public General<UserViewModel> Delete(int id)
+
+        public General<UserViewModel> DeleteUser(int id, UserViewModel user)
+        {
+            var result = new General<UserViewModel>();
+
+            using (var context = new GrootContext())
+            {
+                var userActivity = context.User.SingleOrDefault(i => i.Id == id);
+
+                if (userActivity is not null)
+                {
+                    userActivity.IsActive = false;
+                    userActivity.IsDeleted = true;
+
+                    context.SaveChanges();
+
+                    result.Entity = mapper.Map<UserViewModel>(userActivity);
+                    result.IsSuccess = true;
+                }
+                else
+                {
+                    result.ExceptionMessage = "Aranan kullanıcı bulunamadı. Bilgileri kontrol ediniz.";
+                }
+            }
+
+            return result;
+        }
+        /*
+        public General<UserViewModel> DeleteUser(int id)
         {
             var result = new General<UserViewModel>();
 
@@ -44,6 +72,8 @@ namespace Week3.Service.User
             return result;
         }
 
+        */
+
         public General<UserViewModel> GetUsers()
         {
             var result = new General<UserViewModel>();
@@ -68,61 +98,72 @@ namespace Week3.Service.User
             return result;
         }
 
-        public General<UserViewModel> Insert(UserViewModel newUser)
+        public General<UserViewModel> InsertUser(UserViewModel user)
         {
             var result = new General<UserViewModel>();
-            var model = mapper.Map<Week3.DB.Entities.User>(newUser);
+            var InsUser = mapper.Map<Week3.DB.Entities.User>(user);
 
             using (var context = new GrootContext())
             {
-                model.Idate = DateTime.Now;
-                model.IsActive = true;
-                context.User.Add(model);
+                InsUser.Idate = DateTime.Now;
+                InsUser.IsActive = true;
+                context.User.Add(InsUser);
                 context.SaveChanges();
 
-                result.Entity = mapper.Map<UserViewModel>(model);
+                result.Entity = mapper.Map<UserViewModel>(InsUser);
                 result.IsSuccess = true;
+                result.ExceptionMessage = "İşlem başarılı !";
             }
 
             return result;
         }
 
-        public General<UserViewModel> Login(UserViewModel user)
+        public General<UserLoginViewModel> Login(UserLoginViewModel user)
         {
-            var result = new General<UserViewModel>();
-            var model = mapper.Map<Week3.DB.Entities.User>(user);
+            var result = new General<UserLoginViewModel>();
+            var logUser = mapper.Map<Week3.DB.Entities.User>(user);
 
             using (var context = new GrootContext())
             {
-                result.Entity = mapper.Map<UserViewModel>(model);
-                result.IsSuccess = context.User.Any(
-                    x => x.UserName == user.UserName &&
-                                       x.IsActive &&
-                                       !x.IsDeleted &&
-                                       x.Password == user.Password);
-            }
-
-            return result;
-        }
-
-        public General<UserViewModel> Update(int id, UserViewModel user)
-        {
-            var result = new General<UserViewModel>();
-
-            using (var context = new GrootContext())
-            {
-                var updateUser = context.User.SingleOrDefault(i => i.Id == id);
-
-                if (updateUser is not null)
+                if(context.User.Any(x => x.UserName == user.UserName &&
+                                         x.IsActive &&
+                                         !x.IsDeleted &&
+                                         x.Password == user.Password))
                 {
-                    updateUser.Name = user.Name;
-                    updateUser.UserName = user.UserName;
-                    updateUser.Email = user.Email;
-                    updateUser.Password = user.Password;
+                    result.Entity = mapper.Map<UserLoginViewModel>(logUser);
+                    result.IsSuccess = true;
+                    result.ExceptionMessage = "İşlem Başarılı !";
+                }
+
+                else
+                {
+                    result.ExceptionMessage = "Kullanıcı bulunamadı. Bilgileri kontrol edin !";
+                }
+                
+            }
+
+            return result;
+        }
+
+        public General<UserViewModel> UpdateUser(int id, UserViewModel user)
+        {
+            var result = new General<UserViewModel>();
+
+            using (var context = new GrootContext())
+            {
+                var updatedUser = context.User.SingleOrDefault(i => i.Id == id);
+                
+
+                if (updatedUser is not null)
+                {
+                    updatedUser.Name = user.Name;
+                    updatedUser.UserName = user.UserName;
+                    updatedUser.Email = user.Email;
+                    updatedUser.Password = user.Password;
 
                     context.SaveChanges();
 
-                    result.Entity = mapper.Map<UserViewModel>(updateUser);
+                    result.Entity = mapper.Map<UserViewModel>(updatedUser);
                     result.IsSuccess = true;
                 }
                 else
@@ -133,5 +174,7 @@ namespace Week3.Service.User
 
             return result;
         }
+
+       
     }
 }

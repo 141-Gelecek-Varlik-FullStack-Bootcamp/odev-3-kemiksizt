@@ -16,16 +16,22 @@ namespace Week3.API.Controllers
             userService = _userService;
         }
 
-        [HttpPost("login")]
-        public General<UserViewModel> Login([FromBody] UserViewModel user)
+        [HttpPost("Delete")]
+        public General<UserViewModel> DeleteUser(int id, [FromBody] UserViewModel user)
+        {
+            return userService.DeleteUser(id, user);
+        }
+
+        [HttpPost("Login")]
+        public General<UserLoginViewModel> Login([FromBody] UserLoginViewModel user)
         {
             return userService.Login(user);
         }
 
-        [HttpPost]
-        public General<UserViewModel> Insert([FromBody] UserViewModel newUser)
+        [HttpPost("Insert")]
+        public General<UserViewModel> InsertUser([FromBody] UserViewModel newUser)
         {
-            return userService.Insert(newUser);
+            return userService.InsertUser(newUser);
         }
 
         [HttpGet]
@@ -35,16 +41,17 @@ namespace Week3.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public General<UserViewModel> Update(int id, [FromBody] UserViewModel user)
+        public General<UserViewModel> UpdateUser(int id, [FromBody] UserViewModel user)
         {
-            return userService.Update(id, user);
+            return userService.UpdateUser(id, user);
         }
-
+        /*
         [HttpDelete("{id}")]
-        public General<UserViewModel> Delete(int id)
+        public General<UserViewModel> DeleteUser(int id)
         {
-            return userService.Delete(id);
+            return userService.DeleteUser(id);
         }
+        */
     }
 
 
