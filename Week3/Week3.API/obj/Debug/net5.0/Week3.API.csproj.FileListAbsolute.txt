@@ -64,3 +64,5 @@ C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Week3.Model.pdb
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Week3.Service.pdb
 C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\obj\Debug\net5.0\Week3.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Week3.Extension.dll
+C:\Users\Turab\Documents\GitHub\odev-3-kemiksizt\Week3\Week3.API\bin\Debug\net5.0\Week3.Extension.pdb

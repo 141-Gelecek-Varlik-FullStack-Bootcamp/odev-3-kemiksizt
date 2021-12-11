@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Week3.DB\Week3.DB.csproj" />
+    <ProjectReference Include="..\Week3.Extension\Week3.Extension.csproj" />
     <ProjectReference Include="..\Week3.Model\Week3.Model.csproj" />
     <ProjectReference Include="..\Week3.Service\Week3.Service.csproj" />
   </ItemGroup>

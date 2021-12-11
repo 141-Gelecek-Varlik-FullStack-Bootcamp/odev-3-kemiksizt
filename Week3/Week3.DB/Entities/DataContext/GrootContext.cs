@@ -9,8 +9,6 @@ namespace Week3.DB.Entities.DataContext
 {
     public partial class GrootContext : DbContext
     {
-        // Scaffold-DbContext "Server=.;Database=Groot;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Contextdir Entities/DataContext -Context GrootContext -Project Hafta3.DB -StartUpProject Hafta3.DB -NoPluralize -Force
-
         public GrootContext()
         {
         }
@@ -71,7 +69,7 @@ namespace Week3.DB.Entities.DataContext
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.HasNoKey();
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Description)
                     .IsRequired()
@@ -82,8 +80,6 @@ namespace Week3.DB.Entities.DataContext
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Idate)
                     .HasColumnType("datetime")
@@ -106,14 +102,14 @@ namespace Week3.DB.Entities.DataContext
                 entity.Property(e => e.Uuser).HasColumnName("UUser");
 
                 entity.HasOne(d => d.Category)
-                    .WithMany()
+                    .WithMany(p => p.Product)
                     .HasForeignKey(d => d.CategoryId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Product_Category");
 
                 entity.HasOne(d => d.IdNavigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.Id)
+                    .WithOne(p => p.Product)
+                    .HasForeignKey<Product>(d => d.Id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Product_User");
             });

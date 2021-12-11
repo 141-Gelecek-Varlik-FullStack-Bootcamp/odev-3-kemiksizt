@@ -36,6 +36,7 @@
           "AutoMapper": "10.1.1",
           "Swashbuckle.AspNetCore": "6.2.3",
           "Week3.DB": "1.0.0",
+          "Week3.Extension": "1.0.0",
           "Week3.Model": "1.0.0",
           "Week3.Service": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -1365,6 +1366,14 @@
         },
         "compile": {
           "Week3.DB.dll": {}
+        }
+      },
+      "Week3.Extension/1.0.0": {
+        "runtime": {
+          "Week3.Extension.dll": {}
+        },
+        "compile": {
+          "Week3.Extension.dll": {}
         }
       },
       "Week3.Model/1.0.0": {
@@ -3790,6 +3799,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "Week3.DB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Week3.Extension/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

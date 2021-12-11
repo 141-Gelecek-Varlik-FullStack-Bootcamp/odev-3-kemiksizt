@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3.API", "Week3.API\Week3.API.csproj", "{C5BC0793-9F7E-4058-ACEB-7B0BCDBB2873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week3.API", "Week3.API\Week3.API.csproj", "{C5BC0793-9F7E-4058-ACEB-7B0BCDBB2873}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E467D59A-64E9-4E95-A93E-6AB81F7A70F7} = {E467D59A-64E9-4E95-A93E-6AB81F7A70F7}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3.DB", "Week3.DB\Week3.DB.csproj", "{21106F56-61F0-452A-A585-742A5B609058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week3.DB", "Week3.DB\Week3.DB.csproj", "{21106F56-61F0-452A-A585-742A5B609058}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3.Model", "Week3.Model\Week3.Model.csproj", "{92F18981-F3BC-4C9C-BC4B-A0A0790EFC4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week3.Model", "Week3.Model\Week3.Model.csproj", "{92F18981-F3BC-4C9C-BC4B-A0A0790EFC4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3.Service", "Week3.Service\Week3.Service.csproj", "{861CB63C-DF88-478E-8331-31A2C9C153CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week3.Service", "Week3.Service\Week3.Service.csproj", "{861CB63C-DF88-478E-8331-31A2C9C153CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3.Extension", "Week3.Extension\Week3.Extension.csproj", "{E467D59A-64E9-4E95-A93E-6AB81F7A70F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{861CB63C-DF88-478E-8331-31A2C9C153CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{861CB63C-DF88-478E-8331-31A2C9C153CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{861CB63C-DF88-478E-8331-31A2C9C153CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E467D59A-64E9-4E95-A93E-6AB81F7A70F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E467D59A-64E9-4E95-A93E-6AB81F7A70F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E467D59A-64E9-4E95-A93E-6AB81F7A70F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E467D59A-64E9-4E95-A93E-6AB81F7A70F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

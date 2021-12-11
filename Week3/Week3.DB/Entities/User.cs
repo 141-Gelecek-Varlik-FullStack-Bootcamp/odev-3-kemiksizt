@@ -24,6 +24,7 @@ namespace Week3.DB.Entities
         public int Iuser { get; set; }
         public int? Uuser { get; set; }
 
+        public virtual Product Product { get; set; }
         public virtual ICollection<Category> Category { get; set; }
     }
 }

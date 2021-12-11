@@ -1573,6 +1573,16 @@
           "bin/placeholder/Week3.DB.dll": {}
         }
       },
+      "Week3.Extension/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Week3.Extension.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Week3.Extension.dll": {}
+        }
+      },
       "Week3.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5975,6 +5985,11 @@
       "path": "../Week3.DB/Week3.DB.csproj",
       "msbuildProject": "../Week3.DB/Week3.DB.csproj"
     },
+    "Week3.Extension/1.0.0": {
+      "type": "project",
+      "path": "../Week3.Extension/Week3.Extension.csproj",
+      "msbuildProject": "../Week3.Extension/Week3.Extension.csproj"
+    },
     "Week3.Model/1.0.0": {
       "type": "project",
       "path": "../Week3.Model/Week3.Model.csproj",
@@ -5991,6 +6006,7 @@
       "AutoMapper >= 10.1.1",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Week3.DB >= 1.0.0",
+      "Week3.Extension >= 1.0.0",
       "Week3.Model >= 1.0.0",
       "Week3.Service >= 1.0.0"
     ]
@@ -6024,6 +6040,9 @@
           "projectReferences": {
             "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.DB\\Week3.DB.csproj": {
               "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.DB\\Week3.DB.csproj"
+            },
+            "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Extension\\Week3.Extension.csproj": {
+              "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Extension\\Week3.Extension.csproj"
             },
             "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Model\\Week3.Model.csproj": {
               "projectPath": "C:\\Users\\Turab\\Documents\\GitHub\\odev-3-kemiksizt\\Week3\\Week3.Model\\Week3.Model.csproj"
