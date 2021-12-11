@@ -36,6 +36,7 @@ namespace Week3.Service.User
 
                     result.Entity = mapper.Map<UserViewModel>(userActivity);
                     result.IsSuccess = true;
+                    result.Message = "Silme işlemi başarılı!";
                 }
                 else
                 {
@@ -88,6 +89,7 @@ namespace Week3.Service.User
                 {
                     result.List = mapper.Map<List<UserViewModel>>(data);
                     result.IsSuccess = true;
+                    result.Message = "İşlem başarılı!";
                 }
                 else
                 {
@@ -112,7 +114,7 @@ namespace Week3.Service.User
 
                 result.Entity = mapper.Map<UserViewModel>(InsUser);
                 result.IsSuccess = true;
-                result.ExceptionMessage = "İşlem başarılı !";
+                result.Message = "İşlem başarılı !";
             }
 
             return result;
@@ -132,7 +134,7 @@ namespace Week3.Service.User
                 {
                     result.Entity = mapper.Map<UserLoginViewModel>(logUser);
                     result.IsSuccess = true;
-                    result.ExceptionMessage = "İşlem Başarılı !";
+                    result.Message = "İşlem Başarılı !";
                 }
 
                 else
@@ -165,6 +167,7 @@ namespace Week3.Service.User
 
                     result.Entity = mapper.Map<UserViewModel>(updatedUser);
                     result.IsSuccess = true;
+                    result.Message = "Güncelleme işlemi başarılı!";
                 }
                 else
                 {

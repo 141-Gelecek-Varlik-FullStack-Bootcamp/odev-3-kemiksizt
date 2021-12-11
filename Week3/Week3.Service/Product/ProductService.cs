@@ -18,31 +18,58 @@ namespace Week3.Service.Product
         {
             mapper = _mapper;
         }
-        public General<ProductViewModel> DeleteProduct(int id)
+
+        public General<ProductViewModel> GetProductListById(int id, ProductViewModel product)
         {
             var result = new General<ProductViewModel>();
 
             using (var context = new GrootContext())
             {
-                var product = context.Product.SingleOrDefault(i => i.Id == id);
+                var data = context.User
+                    .Where(x => x.IsActive && !x.IsDeleted && x.Iuser == id)
+                    .OrderBy(x => x.Id);
 
-                if (product is not null)
+                if (data.Any())
                 {
-                    context.Product.Remove(product);
-                    context.SaveChanges();
-
-                    result.Entity = mapper.Map<ProductViewModel>(product);
+                    result.List = mapper.Map<List<ProductViewModel>>(data);
                     result.IsSuccess = true;
+                    result.Message = "İşlem başarılı!";
                 }
                 else
                 {
-                    result.ExceptionMessage = "Ürün bulunamadı. Bilgileri kontrol ediniz";
-                    result.IsSuccess = false;
+                    result.ExceptionMessage = "Sistemde hiçbir kullanıcı yok";
                 }
             }
 
             return result;
         }
+        /*
+        public General<ProductViewModel> DeleteProduct(int id)
+        {
+           var result = new General<ProductViewModel>();
+
+           using (var context = new GrootContext())
+           {
+               var product = context.Product.SingleOrDefault(i => i.Id == id);
+
+               if (product is not null)
+               {
+                   context.Product.Remove(product);
+                   context.SaveChanges();
+
+                   result.Entity = mapper.Map<ProductViewModel>(product);
+                   result.IsSuccess = true;
+               }
+               else
+               {
+                   result.ExceptionMessage = "Ürün bulunamadı. Bilgileri kontrol ediniz";
+                   result.IsSuccess = false;
+               }
+           }
+
+           return result;
+        }
+        */
 
         public General<ProductViewModel> GetProducts()
         {

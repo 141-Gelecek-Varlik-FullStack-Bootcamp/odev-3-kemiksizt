@@ -16,6 +16,12 @@ namespace Week3.API.Controllers
             productService = _productService;
         }
 
+        [HttpGet("{Id}")]
+        public General<ProductViewModel> GetProductListById(int id, ProductViewModel product)
+        {
+            return productService.GetProductListById(id, product);
+        }
+
 
         [HttpPost("Insert")]
         public General<ProductViewModel> InsertProduct([FromBody] ProductViewModel newProduct)
@@ -34,12 +40,13 @@ namespace Week3.API.Controllers
         {
             return productService.UpdateProduct(id, product);
         }
-
+        /*
         [HttpDelete("{id}")]
         public General<ProductViewModel> DeleteProduct(int id)
         {
             return productService.DeleteProduct(id);
         }
+        */
     }
     
 }

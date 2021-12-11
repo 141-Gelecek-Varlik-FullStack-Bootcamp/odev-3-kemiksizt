@@ -18,6 +18,8 @@ namespace Week3.Service.Category
         {
             mapper = _mapper;
         }
+
+        /*
         public General<CategoryViewModel> DeleteCategory(int id)
         {
             var result = new General<CategoryViewModel>();
@@ -43,7 +45,7 @@ namespace Week3.Service.Category
 
             return result;
         }
-
+        */
         public General<CategoryViewModel> GetCategories()
         {
             var categories = new General<CategoryViewModel>();
@@ -58,6 +60,7 @@ namespace Week3.Service.Category
                 {
                     categories.List = mapper.Map<List<CategoryViewModel>>(data);
                     categories.IsSuccess = true;
+                    categories.Message = "İşlem başarılı !";
                 }
                 else
                 {
@@ -70,7 +73,7 @@ namespace Week3.Service.Category
 
         public General<CategoryViewModel> InsertCategory(CategoryViewModel category)
         {
-            var data = new General<CategoryViewModel>();
+            var result = new General<CategoryViewModel>();
             var InsCategory = mapper.Map<Week3.DB.Entities.Category>(category);
 
             using (var context = new GrootContext())
@@ -80,11 +83,12 @@ namespace Week3.Service.Category
                 context.Category.Add(InsCategory);
                 context.SaveChanges();
 
-                data.Entity = mapper.Map<CategoryViewModel>(InsCategory);
-                data.IsSuccess = true;
+                result.Entity = mapper.Map<CategoryViewModel>(InsCategory);
+                result.IsSuccess = true;
+                result.Message = "İşlem başarılı !";
             }
 
-            return data;
+            return result;
         }
 
 
@@ -106,6 +110,7 @@ namespace Week3.Service.Category
 
                     data.Entity = mapper.Map<CategoryViewModel>(updatedCategory);
                     data.IsSuccess = true;
+                    data.Message = "Güncelleme işlemi başarılı!";
                 }
                 else
                 {

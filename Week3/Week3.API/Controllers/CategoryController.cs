@@ -34,11 +34,13 @@ namespace Week3.API.Controllers
             return categoryService.UpdateCategory(id, category);
         }
 
+        /*
         [HttpDelete("{id}")]
         public General<CategoryViewModel> DeleteProduct(int id)
         {
             return categoryService.DeleteCategory(id);
         }
+        */
     }
 
 }
