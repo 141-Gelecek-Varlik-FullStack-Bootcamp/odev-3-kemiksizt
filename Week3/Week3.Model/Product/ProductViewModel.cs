@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Week3.Model.Product
 {
+
+    // Product tablosu üzerinde işlem yapmak için oluşurulan model
     public class ProductViewModel
     {
         public int Id { get; set; }

@@ -18,7 +18,7 @@ namespace Week3.Service.User
         {
             mapper = _mapper;
         }
-
+        // Silme işlemi. Verilen tamamen silinmiyor yalnızca IsActive ve IsDelete kısımları değişiyor.
         public General<UserViewModel> DeleteUser(int id, UserViewModel user)
         {
             var result = new General<UserViewModel>();
@@ -46,6 +46,8 @@ namespace Week3.Service.User
 
             return result;
         }
+
+        // Delete işlemi tüm verileri sildiği için yalnızca deneme amaçlı yazılmıştır!!
         /*
         public General<UserViewModel> DeleteUser(int id)
         {
@@ -75,6 +77,7 @@ namespace Week3.Service.User
 
         */
 
+        // Tüm kullanıcıları getiren Request(Get)
         public General<UserViewModel> GetUsers()
         {
             var result = new General<UserViewModel>();
@@ -100,6 +103,7 @@ namespace Week3.Service.User
             return result;
         }
 
+        // Yeni bir kullanıcı eklemek için kullanılır(Insert)
         public General<UserViewModel> InsertUser(UserViewModel user)
         {
             var result = new General<UserViewModel>();
@@ -120,6 +124,7 @@ namespace Week3.Service.User
             return result;
         }
 
+        // Login işleminde kullanıcı adı ve parola kıyaslaması yapan Request.(Login)
         public General<UserLoginViewModel> Login(UserLoginViewModel user)
         {
             var result = new General<UserLoginViewModel>();
@@ -147,6 +152,7 @@ namespace Week3.Service.User
             return result;
         }
 
+        // Eğer kullanıcı databasede kayıtlı ise bilgilerini güncellemek için kullanılan Request.(Update)
         public General<UserViewModel> UpdateUser(int id, UserViewModel user)
         {
             var result = new General<UserViewModel>();

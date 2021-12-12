@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Week3.Model.User
 {
+
+    // User tablosu üzerinde işlem yapmak için oluşurulan model
     public class UserViewModel
     {
         public string Name { get; set; }

@@ -5,6 +5,7 @@ using Week3.Service.Category;
 
 namespace Week3.API.Controllers
 {
+   
     [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : ControllerBase
@@ -14,6 +15,12 @@ namespace Week3.API.Controllers
         public CategoryController(ICategoryService _categoryService)
         {
             categoryService = _categoryService;
+        }
+
+        [HttpPost("Delete")]
+        public General<CategoryViewModel> DeleteCategory(int id, [FromBody] CategoryViewModel category)
+        {
+            return categoryService.DeleteCategory(id, category);
         }
 
         [HttpPost("Insert")]

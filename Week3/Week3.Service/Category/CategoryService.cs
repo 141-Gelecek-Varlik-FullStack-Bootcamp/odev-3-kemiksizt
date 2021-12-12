@@ -19,6 +19,7 @@ namespace Week3.Service.Category
             mapper = _mapper;
         }
 
+        // İçerisinde bulunan tüm verileri sildiği için aşağıda başka türevi tanınlanmıştır. Deneme amaçlıdır !!
         /*
         public General<CategoryViewModel> DeleteCategory(int id)
         {
@@ -46,6 +47,8 @@ namespace Week3.Service.Category
             return result;
         }
         */
+
+        // Bütün kategorileri listeler(Get)
         public General<CategoryViewModel> GetCategories()
         {
             var categories = new General<CategoryViewModel>();
@@ -71,6 +74,8 @@ namespace Week3.Service.Category
             return categories;
         }
 
+        // Kategorilere yeni ekleme işlemleri yapılan kısım.(Insert)
+
         public General<CategoryViewModel> InsertCategory(CategoryViewModel category)
         {
             var result = new General<CategoryViewModel>();
@@ -91,7 +96,7 @@ namespace Week3.Service.Category
             return result;
         }
 
-
+        // Belirtilen id ye sahip kategoride güncelleme işlemleri yapılır.(Update)
         public General<CategoryViewModel> UpdateCategory(int id, CategoryViewModel category)
         {
             var data = new General<CategoryViewModel>();
@@ -119,6 +124,35 @@ namespace Week3.Service.Category
             }
 
             return data;
+        }
+
+        // Belirtilen id ye sahip kategorinin aktifliği değiştirilir. İçerisindeki bilgiler aynen kalır(Delete)
+        public General<CategoryViewModel> DeleteCategory(int id, CategoryViewModel category)
+        {
+            var result = new General<CategoryViewModel>();
+
+            using (var context = new GrootContext())
+            {
+                var categoryActivity = context.Category.SingleOrDefault(i => i.Id == id);
+
+                if (categoryActivity is not null)
+                {
+                    categoryActivity.IsActive = false;
+                    categoryActivity.IsDeleted = true;
+
+                    context.SaveChanges();
+
+                    result.Entity = mapper.Map<CategoryViewModel>(categoryActivity);
+                    result.IsSuccess = true;
+                    result.Message = "Silme işlemi başarılı!";
+                }
+                else
+                {
+                    result.ExceptionMessage = "Aranan kategori bulunamadı. Bilgileri kontrol ediniz.";
+                }
+            }
+
+            return result;
         }
 
 

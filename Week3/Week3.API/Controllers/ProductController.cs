@@ -16,6 +16,12 @@ namespace Week3.API.Controllers
             productService = _productService;
         }
 
+        [HttpPost("Delete")]
+        public General<ProductViewModel> DeleteUser(int id, [FromBody] ProductViewModel product)
+        {
+            return productService.DeleteProduct(id, product);
+        }
+
         [HttpGet("{Id}")]
         public General<ProductViewModel> GetProductListById(int id, ProductViewModel product)
         {

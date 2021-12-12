@@ -3,7 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Week3.DB.Entities;
 
-#nullable disable
+#nullable disable  
+// Database oluşturulduktan sonra bağlantıların otomatik olarak oluşturulduğu kısım(İçerikler)
 
 namespace Week3.DB.Entities.DataContext
 {

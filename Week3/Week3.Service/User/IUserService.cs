@@ -10,6 +10,9 @@ namespace Week3.Service.User
 {
     public interface IUserService
     {
+
+        //UserService içerisinde kullanılacak işlemleri bu interface içerisinde tanımladım.
+
         public General<UserLoginViewModel> Login(UserLoginViewModel user);
         public General<UserViewModel> GetUsers();
         public General<UserViewModel> InsertUser(UserViewModel newUser);

@@ -19,6 +19,7 @@ namespace Week3.Service.Product
             mapper = _mapper;
         }
 
+        // Sistemdeki belirtilen id grubuna ait bütün ürünleri getiren Request(GetById)
         public General<ProductViewModel> GetProductListById(int id, ProductViewModel product)
         {
             var result = new General<ProductViewModel>();
@@ -37,12 +38,13 @@ namespace Week3.Service.Product
                 }
                 else
                 {
-                    result.ExceptionMessage = "Sistemde hiçbir kullanıcı yok";
+                    result.ExceptionMessage = "Sistemde hiçbir ürün yok";
                 }
             }
 
             return result;
         }
+        // Sistemdeki ürüne ait tüm özellikleri silen Request. Deneme amaçlı yapılmıştır!!
         /*
         public General<ProductViewModel> DeleteProduct(int id)
         {
@@ -71,6 +73,7 @@ namespace Week3.Service.Product
         }
         */
 
+        // Sistemdeki bütün ürünleri getiren Request(Get)
         public General<ProductViewModel> GetProducts()
         {
             var products = new General<ProductViewModel>();
@@ -95,6 +98,7 @@ namespace Week3.Service.Product
             return products;
         }
 
+        // Sisteme yeni ürün eklemek için kullanılan Request(Insert) 
         public General<ProductViewModel> InsertProduct(ProductViewModel product)
         {
             var data = new General<ProductViewModel>();
@@ -115,6 +119,7 @@ namespace Week3.Service.Product
         }
 
 
+        // Var olan ürünün özelliklerini değiştirmek için kullanılan Request.(Update)
         public General<ProductViewModel> UpdateProduct(int id, ProductViewModel product)
         {
             var data = new General<ProductViewModel>();
@@ -135,6 +140,7 @@ namespace Week3.Service.Product
 
                     data.Entity = mapper.Map<ProductViewModel>(updatedProduct);
                     data.IsSuccess = true;
+                    data.Message = "İşlem başarılı!!";
                 }
                 else
                 {
@@ -143,6 +149,35 @@ namespace Week3.Service.Product
             }
 
             return data;
+        }
+
+        // Silme işlemi. Verilen tamamen silinmiyor yalnızca IsActive ve IsDelete kısımları değişiyor.
+        public General<ProductViewModel> DeleteProduct(int id, ProductViewModel product)
+        {
+            var result = new General<ProductViewModel>();
+
+            using (var context = new GrootContext())
+            {
+                var productActivity = context.Product.SingleOrDefault(i => i.Id == id);
+
+                if (productActivity is not null)
+                {
+                    productActivity.IsActive = false;
+                    productActivity.IsDeleted = true;
+
+                    context.SaveChanges();
+
+                    result.Entity = mapper.Map<ProductViewModel>(productActivity);
+                    result.IsSuccess = true;
+                    result.Message = "Silme işlemi başarılı!";
+                }
+                else
+                {
+                    result.ExceptionMessage = "Aranan ürün bulunamadı. Bilgileri kontrol ediniz.";
+                }
+            }
+
+            return result;
         }
 
 

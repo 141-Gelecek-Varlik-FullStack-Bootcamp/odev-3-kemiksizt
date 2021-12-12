@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 #nullable disable
 
+// User tablosunun bağlantıları
+
 namespace Week3.DB.Entities
 {
     public partial class User

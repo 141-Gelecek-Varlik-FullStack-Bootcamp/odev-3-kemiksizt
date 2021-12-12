@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+// Category tablosu üzerinde işlem yapmak için oluşurulan model
 namespace Week3.Model.Category
 {
     public class CategoryViewModel
